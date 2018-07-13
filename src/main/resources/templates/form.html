@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+
+	<header th:replace="layout/layout :: header"></header>
+
+	<div class="container py-4">
+		<div class="card bg-light">
+			<div class="card-header" th:text="${title}"></div>
+			<div class="card-body">
+				<form th:action="@{/form}" th:object="${client}" method="post" enctype="multipart/form-data">
+					<div class="form-group">
+						<label for="txtNombre">Nombre</label> <input type="text"
+							class="form-control" id="txtNombre" th:field="*{name}"
+							th:errorclass="'form-control alert-danger'" /> <small
+							class="form-text text-danger"
+							th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small>
+					</div>
+					<div class="form-group">
+						<label for="txtApellido">Apellido</label> <input type="text"
+							class="form-control" id="txtApellido" th:field="*{lastname}"
+							th:errorclass="'form-control alert-danger'" /> <small
+							class="form-text text-danger"
+							th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></small>
+					</div>
+					<div class="form-group">
+						<label for="txtEmail">Email</label> <input type="text"
+							class="form-control" id="txtEmail" th:field="*{email}"
+							th:errorclass="'form-control alert-danger'" /> <small
+							class="form-text text-danger"
+							th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+					</div>
+					<div class="form-group">
+						<label for="txtFecha">Fecha</label> <input type="date"
+							class="form-control" id="txtFecha" th:field="*{createAt}"
+							th:errorclass="'form-control alert-danger'" /> <small
+							class="form-text text-danger"
+							th:if="${#fields.hasErrors('createAt')}" th:errors="*{createAt}"></small>
+					</div>
+					<div class="form-group">
+						<label for="file">Foto</label> <input type="file"
+							class="form-control" id="file" name = "file"/>
+					</div>
+					<div class="form-group">
+						<input type="submit" class="form-control btn btn-primary"
+							value="Crear cliente" />
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>

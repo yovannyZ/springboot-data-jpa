@@ -30,13 +30,3 @@ INSERT INTO client(id, name, lastname, email, create_at, photo) VALUES(29, 'Yova
 INSERT INTO client(id, name, lastname, email, create_at, photo) VALUES(30, 'Luis', 'Zeballos', 'zeballos.luis@gmail.com', '1989-05-08','');
 INSERT INTO client(id, name, lastname, email, create_at, photo) VALUES(31, 'Yovanny', 'Zeballos', 'zeballos.yovanny@gmail.com', '1989-05-08','');
 INSERT INTO client(id, name, lastname, email, create_at, photo) VALUES(32, 'Luis', 'Zeballos', 'zeballos.luis@gmail.com', '1989-05-08','');
-
-
-INSERT INTO porduct(name, price, create_at) VALUES('Monitor Samsumg 42', 850.00, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Mouse Dell', 17.00, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Laptop Dell 15', 1200.00, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Teclado Logitec', 23.50, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Celular ZTE', 320, NOW());
-
-
-

@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "invoce_line")
+@Table(name = "invoice_line")
 public class InvoiceLine implements Serializable {
 
 	@Id

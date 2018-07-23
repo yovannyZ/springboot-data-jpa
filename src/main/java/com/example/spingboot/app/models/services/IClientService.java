@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.example.spingboot.app.models.entity.Client;
+import com.example.spingboot.app.models.entity.Product;
 
 public interface IClientService {
 	public List<Client> findAll();
@@ -13,4 +14,5 @@ public interface IClientService {
 	public void save(Client client);
 	public Client findOne(Long id);
 	public void delete(Long id);
+	public List<Product> findByName(String term);
 }

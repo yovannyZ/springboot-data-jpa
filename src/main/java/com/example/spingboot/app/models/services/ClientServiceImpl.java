@@ -9,13 +9,18 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.spingboot.app.models.dao.IClientDao;
+import com.example.spingboot.app.models.dao.IProductDao;
 import com.example.spingboot.app.models.entity.Client;
+import com.example.spingboot.app.models.entity.Product;
 
 @Service
 public class ClientServiceImpl implements IClientService {
 
 	@Autowired
 	private IClientDao clienteDao;
+	
+	@Autowired
+	private IProductDao productDao;;
 	
 	@Transactional(readOnly = true)
 	@Override
@@ -42,9 +47,16 @@ public class ClientServiceImpl implements IClientService {
 		clienteDao.delete(id);		
 	}
 
+	@Transactional(readOnly = true)
 	@Override
 	public Page<Client> findAll(Pageable pageable) {
 		return clienteDao.findAll(pageable);
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public List<Product> findByName(String term) {
+		return productDao.findByName(term);
 	}
 
 }

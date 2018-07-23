@@ -32,11 +32,22 @@ INSERT INTO client(id, name, lastname, email, create_at, photo) VALUES(31, 'Yova
 INSERT INTO client(id, name, lastname, email, create_at, photo) VALUES(32, 'Luis', 'Zeballos', 'zeballos.luis@gmail.com', '1989-05-08','');
 
 
-INSERT INTO porduct(name, price, create_at) VALUES('Monitor Samsumg 42', 850.00, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Mouse Dell', 17.00, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Laptop Dell 15', 1200.00, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Teclado Logitec', 23.50, NOW());
-INSERT INTO porduct(name, price, create_at) VALUES('Celular ZTE', 320, NOW());
+INSERT INTO product(name, price, create_at) VALUES('Monitor Samsumg 42', 850.00, NOW());
+INSERT INTO product(name, price, create_at) VALUES('Mouse Dell', 17.00, NOW());
+INSERT INTO product(name, price, create_at) VALUES('Laptop Dell 15', 1200.00, NOW());
+INSERT INTO product(name, price, create_at) VALUES('Teclado Logitec', 23.50, NOW());
+INSERT INTO product(name, price, create_at) VALUES('Celular ZTE', 320, NOW());
+
+INSERT INTO invoice(description, observation, client_id, create_at) VALUES ('Factura 1', null, 1, NOW());
+INSERT INTO invoice_line(qty, invoice_id, product_id) VALUES(1,1,1)
+INSERT INTO invoice_line(qty, invoice_id, product_id) VALUES(5,1,2)
+INSERT INTO invoice_line(qty, invoice_id, product_id) VALUES(2,1,3)
+INSERT INTO invoice_line(qty, invoice_id, product_id) VALUES(3,1,4)
+
+INSERT INTO invoice(description, observation, client_id, create_at) VALUES ('Factura 2', 'Observación', 2, NOW());
+INSERT INTO invoice_line(qty, invoice_id, product_id) VALUES(1,2,1)
+INSERT INTO invoice_line(qty, invoice_id, product_id) VALUES(10,2,5)
+
 
 
 
